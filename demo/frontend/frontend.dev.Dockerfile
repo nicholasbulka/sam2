@@ -14,10 +14,10 @@ RUN yarn install
 COPY . .
 
 # Expose the port the app runs on
-EXPOSE 3000
+EXPOSE 5173
 
 # Set environment variable to development
 ENV NODE_ENV=development
 
 # Start the application with hot reloading
-CMD ["yarn", "dev"]
+CMD ["yarn", "dev", "--host", "0.0.0.0"]
