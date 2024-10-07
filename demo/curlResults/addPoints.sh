@@ -1,4 +1,4 @@
-curl -X POST http://10.19.1.21:7263/graphql \
+curl -X POST http://compute.internal.soundmasque.com:7263/graphql \
   -H "Content-Type: application/json" \
   -d '{
     "query": "mutation AddPoints($input: AddPointsInput!) { addPoints(input: $input) { frameIndex rleMaskList { objectId rleMask { size counts order } } } }",

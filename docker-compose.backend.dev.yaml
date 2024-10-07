@@ -1,3 +1,4 @@
+services:
   backend:
     image: sam2/backend
     build:

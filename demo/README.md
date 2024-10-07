@@ -49,8 +49,8 @@ docker compose up --build
 
 This will build and start both services. You can access them at:
 
-- **Frontend:** [http://localhost:7262](http://localhost:7262)
-- **Backend:** [http://compute.soundmasque.internal:7263/graphql](http://compute.soundmasque.internal:7263/graphql)
+- **Frontend:** [https://localhost:7262](https://localhost:7262)
+- **Backend:** [https://compute.soundmasque.internal:7263/graphql](https://compute.soundmasque.internal:7263/graphql)
 
 ## Running Backend with MPS Support
 
@@ -105,7 +105,7 @@ cd demo/backend/server/
 ```bash
 PYTORCH_ENABLE_MPS_FALLBACK=1 \
 APP_ROOT="$(pwd)/../../../" \
-APP_URL=http://compute.soundmasque.internal:7263 \
+APP_URL=http://compute.internal.soundmasque.com:7263 \
 MODEL_SIZE=base_plus \
 DATA_PATH="$(pwd)/../../data" \
 DEFAULT_VIDEO_PATH=gallery/05_default_juggle.mp4 \
