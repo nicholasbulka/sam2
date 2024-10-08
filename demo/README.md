@@ -50,7 +50,7 @@ docker compose up --build
 This will build and start both services. You can access them at:
 
 - **Frontend:** [https://localhost:7262](https://localhost:7262)
-- **Backend:** [https://compute.internal.soundmasque.com:7263/graphql](https://compute.internal.soundmasque.com:7263/graphql)
+- **Backend:** [http://compute.internal.soundmasque.com:7263/graphql](http://compute.internal.soundmasque.com:7263/graphql)
 
 ## Running Backend with MPS Support
 

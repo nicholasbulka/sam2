@@ -1,23 +1,18 @@
 # Use an official Node runtime as the base image
 FROM node:22.9.0
 
-# Set the working directory in the container
-WORKDIR /app
+WORKDIR /usr/src/app/jsframework
 
-# Copy package.json and yarn.lock
-COPY package.json yarn.lock ./
+COPY entrypoint.dev.sh /usr/src/app/jsframework
 
-# Install dependencies
+RUN chmod +x /usr/src/app/jsframework/entrypoint.dev.sh
+
+COPY ./package.json /usr/src/app/jsframework
+
 RUN yarn install
 
-# Copy the rest of the application code
-COPY . .
+COPY ./ /usr/src/app/jsframework
 
-# Expose the port the app runs on
 EXPOSE 5173
 
-# Set environment variable to development
-ENV NODE_ENV=development
-
-# Start the application with hot reloading
-CMD ["yarn", "dev", "--host", "0.0.0.0"]
+ENTRYPOINT ["/usr/src/app/jsframework/entrypoint.dev.sh"]

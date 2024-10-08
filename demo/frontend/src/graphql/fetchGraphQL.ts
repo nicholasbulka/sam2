@@ -32,7 +32,7 @@ export default async function fetchGraphQL(
   cacheConfig: CacheConfig,
   uploadables?: UploadableMap | null,
 ): Promise<GraphQLResponse> {
-  const url = `${endpoint}/graphql`;
+  const url = `${endpoint}/soundsync/graphql`;
 
   const headers: {[name: string]: string} = {};
   const requestInit: RequestInit = {
